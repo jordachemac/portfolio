@@ -1,0 +1,131 @@
+.App {
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: normal;
+  margin: 0;
+  line-height: 69px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: lighter;
+  margin: 0;
+}
+
+h3 {
+  font-size: 23.5px;
+  font-weight: bold;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+}
+
+a {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+button {
+  height: 3.8em;
+  border-radius: 0.8em;
+  padding: 0.9em 1.2em 0.9em 1.2em;
+  background-color: #252727;
+  color: white;
+  font-size: 18px;
+  font-weight: lighter;
+  font-family: 'Inria Sans', sans-serif;
+  box-shadow: 0px 4px 8px 0px #0000001A;
+}
+
+button:hover {
+  background-color: #4A4A4A;
+  border: 1px solid #000000;
+}
+
+.h2-mi {
+  display: block;
+  font-weight: bold;
+}
+
+.small-text {
+  font-size: 16px;
+  margin: 0;
+}
+
+.social-link {
+  width: 64px;
+  height: 64px;
+  background-image: url('./linkedin.svg');
+}
+
+.social-link:hover {
+  width: 64px;
+  height: 64px;
+  background-image: url('./linkedin_hover.svg');
+}
+
+.standard-padding {
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-wrapper {
+  padding: 4em;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  color: black;
+  text-align: left;
+  min-width: 300px;
+  gap: 4em;
+}
+
+.footer-section {
+  margin-top: 8em;
+  max-width: 70%;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.profile-photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
