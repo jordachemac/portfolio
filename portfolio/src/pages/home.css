@@ -1,0 +1,55 @@
+
+
+button {
+  height: 3.8em;
+  border-radius: 0.8em;
+  padding: 0.9em 1.2em 0.9em 1.2em;
+  background-color: #252727;
+  color: white;
+  font-size: 18px;
+  font-weight: lighter;
+  font-family: 'Inria Sans', sans-serif;
+  box-shadow: 0px 4px 8px 0px #0000001A;
+}
+
+button:hover {
+  background-color: #4A4A4A;
+  border: 1px solid #000000;
+}
+
+.small-text {
+  font-size: 16px;
+  margin: 0;
+}
+
+.social-link {
+  width: 64px;
+  height: 64px;
+  background-image: url('./linkedin.svg');
+}
+
+.social-link:hover {
+  width: 64px;
+  height: 64px;
+  background-image: url('./linkedin_hover.svg');
+}
+
+.footer-section {
+  margin-top: 8em;
+  max-width: 70%;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.profile-photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+}
