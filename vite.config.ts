@@ -1,21 +1,16 @@
-import { vitePlugin as remix } from '@remix-run/dev';
+// vite.config.ts
 import { defineConfig } from 'vite';
-import tsconfigPaths from 'vite-tsconfig-paths';
-import path from 'node:path';
-import { netlifyPlugin } from '@netlify/remix-adapter/plugin';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
-    plugins: [
-        remix({
-            ignoredRouteFiles: ['**/*.module.scss'],
-        }),
-        tsconfigPaths(),
-        netlifyPlugin(),
-    ],
-    resolve: {
-        alias: {
-            '@styles': path.resolve(__dirname, './src/styles/'),
-        },
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@components': path.resolve(__dirname, './src/components'),
+      '@assets': path.resolve(__dirname, './src/assets'),
+      '@utils': path.resolve(__dirname, './src/utils'),
+      '@styles': path.resolve(__dirname, './src/styles'),
     },
-    css: { preprocessorOptions: { scss: { api: 'modern' } } },
+  },
 });
