@@ -19,18 +19,18 @@ export const Footer = ({ className }: FooterProps) => {
     return (
         <div className={classNames(styles.root, className)}>
             <div className={styles.details}>
-                <div>Contact Jane Doe</div>
+                <div>Contact us</div>
                 <div className={styles.small}>
-                    Mail: info@mysite.com
-                    <br />
+                    Mail: info@nzorganicsgroup.com
+                    {/* <br />
                     Tel: 123-456-7890
                     <br />
                     500 Terry Francine Street,
                     <br />
-                    San Francisco, CA 94158
+                    San Francisco, CA 94158 */}
                 </div>
             </div>
-            <div className={styles.social}>
+            {/* <div className={styles.social}>
                 <a href="/">
                     <img className={styles.icon} src={twitterxIcon} alt="twitter" />
                 </a>
@@ -49,7 +49,7 @@ export const Footer = ({ className }: FooterProps) => {
                 <a href="/">
                     <img className={styles.icon} src={githubIcon} alt="github" />
                 </a>
-            </div>
+            </div> */}
         </div>
     );
 };

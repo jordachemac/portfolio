@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "~/page/*": ["./app/routes/*"],
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"]
     },
     // Vite takes care of building everything, not tsc.
     "noEmit": true

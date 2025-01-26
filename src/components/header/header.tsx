@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import { Link, NavLink } from '@remix-run/react';
 import { ROUTES } from '~/router/config';
 import styles from './header.module.scss';
+import logo from '~/assets/logo/logo_color.svg';
 
 export interface HeaderProps {
     className?: string;
@@ -11,7 +12,7 @@ export const Header = ({ className }: HeaderProps) => {
     return (
         <div className={classNames(styles.root, className)}>
             <Link to="/" className={styles.logo}>
-                LOGO
+                <img src={logo} alt="NZ Organics Group" />
             </Link>
             <div className={styles.menu}>
                 <NavLink

@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import styles from './_index.module.scss';
-import { LinksFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run/node';
+import { LoaderFunctionArgs, MetaFunction } from '@remix-run/node';
 import commonStyles from '~/styles/common-styles.module.scss';
 import { getUrlOriginWithPath } from '~/utils';
 
@@ -11,23 +11,29 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
 export default function HomePage() {
     return (
         <div className={styles.root}>
-            <div className={styles.title}>I'M A TITLE</div>
-            <div className={styles.paragraph}>
-                <div className={styles.text}>
-                    I’m a paragraph. Add your own text and edit me on properties panel on the right.
-                    It’s easy. Just select me and make changes to the font on the styles panel on
-                    the right. I’m a great place for you to tell a story and let your viewers know a
-                    little more about you.
-                </div>
-            </div>
+            <header className={styles.title}>
+                <h1>NZ Organics Group</h1>
+            </header>
+            <section className={styles.paragraph}>
+                <p className={styles.text}>
+                    {`NZ Organics Group Limited is dedicated to building a leading New Zealand-based export and production
+                     business, specializing in natural, organic, and GMO-free products. Our mission is to unite a number of New Zealand's 
+                     top food production companies, including Over the Moon Dairy, Manuka Health, and Eggs of NZ, to create a 
+                     global powerhouse focused on premium, organic food products for international markets.`}
+                    <br /> <br />
+                    {`With a strong emphasis on expanding into the Asian and Middle Eastern markets, NZ Organics Group is proud 
+                    to bring together award-winning dairy products from Over the Moon, the renowned Manuka honey from Manuka Health, 
+                    and the Organic/Non-GMO eggs from Eggs of NZ. In addition, Eggs of NZ is working on the development of several new 
+                    and exciting egg products, set to be introduced in the future.`}
+                    <br /> <br />
+                    {`NZ Organics Group is actively negotiating with potential partners to integrate various companies into the 
+                    group, with plans for both full and majority ownership, ensuring a mix of 100% and shared equity with current 
+                    owners.`}
+                </p>
+            </section>
             <button className={classNames(commonStyles.primaryButton, styles.button)}>
                 Learn more
             </button>
-            <img
-                src="https://images.unsplash.com/photo-1622542796254-5b9c46ab0d2f?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dwixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"
-                alt=""
-                className={styles.image}
-            />
         </div>
     );
 }
@@ -35,7 +41,7 @@ export default function HomePage() {
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
     const title = 'Website Starter';
     const description = 'Welcome to the Website Starter';
-    const imageUrl = 'https://website-starter.com/og-image.png';
+    //const imageUrl = 'https://website-starter.com/og-image.png';
 
     return [
         { title },
@@ -55,40 +61,6 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
         {
             property: 'og:title',
             content: title,
-        },
-        {
-            property: 'og:description',
-            content: description,
-        },
-        {
-            property: 'og:image',
-            content: imageUrl,
-        },
-        {
-            name: 'twitter:card',
-            content: 'summary_large_image',
-        },
-        {
-            name: 'twitter:title',
-            content: title,
-        },
-        {
-            name: 'twitter:description',
-            content: description,
-        },
-        {
-            name: 'twitter:image',
-            content: imageUrl,
-        },
-    ];
-};
-
-export const links: LinksFunction = () => {
-    return [
-        {
-            rel: 'icon',
-            href: '/favicon.ico',
-            type: 'image/ico',
         },
     ];
 };

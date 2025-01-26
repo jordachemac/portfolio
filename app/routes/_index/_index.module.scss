@@ -5,14 +5,22 @@
     flex-direction: column;
     row-gap: 0.5em;
     background-color: var(--snow-white);
-    padding-top: 2em;
-    padding-bottom: 2em;
+    background-image: 
+    linear-gradient(rgba(20, 78, 49, 0.5), rgba(20, 78, 49, 0.5)), 
+    url('~/assets/img/theme/manuka_aly3naa_min.jpg');
+    background-size: cover;
+    padding-top: 6em;
+    padding-bottom: 4em;
+    color: var(--snow-white);
 }
 
 .title {
-    font: var(--heading1);
+    h1 {
+        font: var(--heading1);
+        letter-spacing: -0.3rem;
+    }
+
     text-align: center;
-    letter-spacing: 0.4rem;
 
     @media only screen and (max-width: general.$mobile-width) {
         font-size: 3rem;
