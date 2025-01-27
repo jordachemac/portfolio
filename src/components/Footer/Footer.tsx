@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import styles from './Footer.module.scss';
+import styles from './footer.module.scss';
 
 const Footer: React.FC = () => {
     const { t } = useTranslation();
