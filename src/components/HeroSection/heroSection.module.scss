@@ -21,13 +21,16 @@
 .title {
     padding-left: 2rem;
     @include breakpoint(sm) {
+        padding-left: 2rem;
+    }
+    @include breakpoint(md) {
         padding-left: 6rem;
     }
 }
 
 .paragraph {
     border-top: 1px solid $brand-green-5;
-    max-width: 100%;
+    max-width: 90%;
     display: flex;
     justify-content: flex-start;
     margin-bottom: 1.5rem;
@@ -35,18 +38,20 @@
 }
 
 .text {
-    text-align: center;
+    text-align: left;
     font-size: $font-size-lg;
     padding-left: 2rem;
-    max-width: 92%;
+    max-width: 96%;
     strong {
         font-weight: 700;
         font-size: $font-size-lg;
     }
 
     @include breakpoint(sm) {
+        padding-left: 2rem;
+    }
+    @include breakpoint(md) {
         padding-left: 6rem;
-        text-align: left;
     }
 }
 

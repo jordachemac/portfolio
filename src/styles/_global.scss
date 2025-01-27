@@ -51,21 +51,16 @@ $text-color: #333333;
 
 $snow-white: #f9f9f9;
 $brand-green-5: #D9F0E5;
+$brand-green-100: #084d37;
 $brand-green-300: #1A2D27;
 
 /* Typography */
-$font-family-base: "Fustat", serif;
-$font-size-base: 10px;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
-@include breakpoint(sm) {
-    $font-size-base: 16px;
-}
-
 * {
     font-family: "Fustat", serif;
-    font-size: $font-size-base;
+    font-size: 10px;
     color: $brand-green-5;
     line-height: 1.5;
     font-synthesis: none;
@@ -74,13 +69,19 @@ $font-weight-bold: 700;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+
+    @include breakpoint(sm) {
+        font-size: 16px;
+    }
 }
 
 $font-size-xs: 0.875rem;
 $font-size-sm: 1.25rem;
 $font-size-md: 1.5rem;
 $font-size-lg: 2rem;
-$font-size-xl: 6rem;
+$font-size-xl: 4rem;
+$font-size-xxl: 6rem;
 
 /* Spacing */
 $spacing-xs: 6px;
@@ -90,12 +91,21 @@ $spacing-l: 24px;
 $spacing-xl: 36px;
 $spacing-xxl: 48px;
 
+svg {
+    min-width: 48px;
+    min-height: 48px;
+    stroke: $primary-color;
+}
 
 h1 {
     font-size: $font-size-xl;
     line-height: 1;
     margin: 0 auto;
     margin-bottom: $spacing-m;
+
+    @include breakpoint(sm) {
+        font-size: $font-size-xxl;
+    }
 }
 
 p {

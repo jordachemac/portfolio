@@ -1,7 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import {
+    XMarkIcon,
+    Bars3BottomLeftIcon,
+    Bars3BottomRightIcon,
+    LanguageIcon,
+} from '@heroicons/react/24/outline';
 import styles from './header.module.scss';
 import logo from '@assets/logo_color.svg';
 
@@ -105,7 +110,7 @@ const Header: React.FC = () => {
                     </li>
                     <li className={styles.languageToggle}>
                         <button onClick={toggleLanguage}>
-                            {t('header.language')}: {i18n.language === 'en' ? 'EN' : 'ع'}
+                            <LanguageIcon /> {t('header.language')}
                         </button>
                     </li>
                 </ul>
@@ -117,7 +122,7 @@ const Header: React.FC = () => {
                 aria-expanded={isMobileMenuOpen}
                 aria-controls="primary-navigation"
             >
-                {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+                {isMobileMenuOpen ? <XMarkIcon /> : <Bars3BottomRightIcon />}
             </button>
         </header>
     );
