@@ -1,9 +1,19 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import styles from './header.module.scss';
 import logo from '@assets/logo_color.svg';
 
 const Header: React.FC = () => {
+    const { t, i18n } = useTranslation();
+
+    const toggleLanguage = () => {
+        const newLang = i18n.language === 'en' ? 'ar' : 'en';
+        i18n.changeLanguage(newLang);
+        // Optional: Change the direction attribute
+        document.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+    };
+
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
@@ -18,7 +28,7 @@ const Header: React.FC = () => {
                             to="/"
                             className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
                         >
-                            Home
+                            {t('header.home')}
                         </NavLink>
                     </li>
                     <li>
@@ -26,7 +36,7 @@ const Header: React.FC = () => {
                             to="/about"
                             className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
                         >
-                            About
+                            {t('header.about')}
                         </NavLink>
                     </li>
                     <li>
@@ -34,11 +44,14 @@ const Header: React.FC = () => {
                             to="/contact"
                             className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
                         >
-                            Contact
+                            {t('header.contact')}
                         </NavLink>
                     </li>
                 </ul>
             </nav>
+            <button onClick={toggleLanguage} className={styles.languageToggle}>
+                {t('header.language')}: {i18n.language === 'en' ? 'EN' : 'ع'}
+            </button>
         </header>
     );
 };

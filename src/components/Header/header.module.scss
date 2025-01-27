@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: $spacing-m;
+    padding: $spacing-m $spacing-l;
     background-color: $snow-white;
 }
 
@@ -19,11 +19,11 @@
     display: flex;
     gap: 15px;
     margin: 0;
-    padding: 0 $spacing-m;;
+    padding: 0 $spacing-m;
 }
 
 .nav a {
-    font-size: $font-size-md;
+    font-size: $font-size-xs;
     color: $primary-color;
     text-decoration: none;
     font-weight: bold;
@@ -36,4 +36,14 @@
 
 .activeLink {
     border-bottom: 3px solid $accent-color-2;
+}
+
+.languageToggle {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: $font-size-xs;
+    color: $primary-color;
+    font-weight: bold;
+    cursor: pointer;
 }

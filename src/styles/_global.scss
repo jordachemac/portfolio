@@ -9,16 +9,17 @@ $background-color: #f5f5f5;
 $text-color: #333333;
 
 $snow-white: #f9f9f9;
-
-
+$brand-green-5: #D9F0E5;
+$brand-green-300: #1A2D27;
 /* Typography */
 $font-family-base: "Fustat", serif;
 $font-size-base: 16px;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
-$font-size-sm: 0.875rem;
-$font-size-md: 1.25rem;
+$font-size-xs: 0.875rem;
+$font-size-sm: 1.25rem;
+$font-size-md: 1.5rem;
 $font-size-lg: 2rem;
 $font-size-xl: 6rem;
 
@@ -73,8 +74,15 @@ $border-radius: 4px;
 
 * {
     font-family: "Fustat", serif;
-    font-size: $font-size-base;
-    color: #f9f9f9;
+    font-size: 16px;
+
+    @include breakpoint(xl) {
+        font-size: 24px;
+    }
+
+
+
+    color: $brand-green-5;
     line-height: 1.5;
     font-synthesis: none;
     font-optical-sizing: auto;
@@ -87,8 +95,10 @@ $border-radius: 4px;
 h1 {
     font-size: $font-size-xl;
     line-height: 1;
+    margin: 0 auto;
+    margin-bottom: $spacing-m;
 }
 
 p {
-    font-size: $font-size-lg;
+    font-size: $font-size-md;
 }
