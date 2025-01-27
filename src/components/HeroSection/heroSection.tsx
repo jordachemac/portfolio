@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './HeroSection.module.scss';
+import styles from './heroSection.module.scss';
 import Button from '@components/Button/button';
 
 const HeroSection: React.FC = () => {
