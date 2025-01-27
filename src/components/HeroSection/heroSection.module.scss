@@ -9,39 +9,44 @@
     linear-gradient(rgba(20, 78, 49, 0.5), rgba(20, 78, 49, 0.5)), 
     url('@assets/images/hero-image.jpg');
     background-size: cover;
-    background-position: right;
+    background-position: left;
     background-repeat: no-repeat;
-    padding: 6rem 2rem 2rem 0rem;
+    padding: 0rem 2rem 2rem 0rem;
+
+    @include breakpoint(sm) {
+        padding: 6rem 6rem 2rem 0rem;
+    }
 }
 
 .title {
-    padding-left: 6rem;
+    padding-left: 2rem;
     @include breakpoint(sm) {
-        font-size: 3rem;
+        padding-left: 6rem;
     }
 }
 
 .paragraph {
     border-top: 1px solid $brand-green-5;
-    max-width: 90%;
+    max-width: 100%;
     display: flex;
     justify-content: flex-start;
     margin-bottom: 1.5rem;
     font-weight: 200;
-
-
-    @include breakpoint(sm) {
-        font-size: 1rem;
-    }
 }
 
 .text {
-    font-size: $font-size-md;
-    padding-left: 6rem;
+    text-align: center;
+    font-size: $font-size-lg;
+    padding-left: 2rem;
     max-width: 92%;
     strong {
         font-weight: 700;
-        font-size: $font-size-md;
+        font-size: $font-size-lg;
+    }
+
+    @include breakpoint(sm) {
+        padding-left: 6rem;
+        text-align: left;
     }
 }
 

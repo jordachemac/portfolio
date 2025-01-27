@@ -5,45 +5,101 @@
     align-items: center;
     padding: $spacing-m $spacing-l;
     background-color: $snow-white;
-}
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
 
-.logo {
-    height: 100%;
-    img {
-        height: 100%;
+    @media (max-width: 768px) {
+        padding: 15px 20px;
     }
 }
 
-.nav ul {
+.logo {
+    img {
+        width: 150px;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 60%;
+        background-color: #ffffff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+
+        &.active {
+            transform: translateX(0);
+        }
+    }
+    transition: transform 0.3s ease-in-out;
+}
+
+.navList {
     list-style: none;
     display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0 $spacing-m;
+    gap: 30px;
+
+    li {
+        a {
+            color: $brand-green-300;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #004bb5;
+            }
+
+            &.activeLink {
+                font-weight: bold;
+                border-bottom: 2px solid $brand-green-300;
+            }
+        }
+
+        &.languageToggle {
+            button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 1rem;
+                color: $brand-green-300;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: #004bb5;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
-.nav a {
-    font-size: $font-size-xs;
-    color: $primary-color;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.nav a:hover {
-    text-decoration: underline;
-}
-
-.activeLink {
-    border-bottom: 3px solid $accent-color-2;
-}
-
-.languageToggle {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    font-size: $font-size-xs;
-    color: $primary-color;
-    font-weight: bold;
+.mobileMenuIcon {
+    display: none;
+    font-size: 3rem;
+    color: $brand-green-300;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    &:hover {
+        color: $brand-green-300;
+    }
 }
