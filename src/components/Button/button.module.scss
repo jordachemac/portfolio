@@ -1,0 +1,54 @@
+/* src/components/Button.module.scss */
+
+.button {
+    padding: $spacing-s 10rem;
+    font-size: $font-size-lg;
+    max-width: 600px;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    &:focus {
+        outline: 2px solid #005fcc;
+        outline-offset: 2px;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+}
+
+.primary {
+    background-color: $accent-color-2;
+    color: #ffffff;
+
+    &:hover {
+        background-color: #0c3b25;
+    }
+
+    &:disabled {
+        background-color: #a0c4ff;
+    }
+}
+
+.secondary {
+    background-color: transparent;
+    color: #005fcc;
+    border: 2px solid #005fcc;
+
+    &:hover {
+        background-color: #005fcc;
+        color: #ffffff;
+    }
+
+    &:disabled {
+        border-color: #a0c4ff;
+        color: #a0c4ff;
+    }
+}

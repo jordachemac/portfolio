@@ -21,12 +21,13 @@
     "jsx": "react-jsx",
 
     /* Base Directory and Paths */
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"],
-      "@utils/*": ["src/utils/*"],
-      "@styles/*": ["src/styles/*"]
+      "@components/*": ["components/*"],
+      "@assets/*": ["assets/*"],
+      "@utils/*": ["utils/*"],
+      "@styles/*": ["styles/*"],
+      "@pages/*": ["pages/*"],
     }
   },
   "include": ["env.d.ts", "**/*.ts", "**/*.tsx", "netlify-edge-plugin.ts", "src", "src/types"],

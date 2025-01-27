@@ -1,13 +1,17 @@
 .header {
+    height: 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #282c34;
+    padding: $spacing-m;
+    background-color: $snow-white;
 }
 
-.logo img {
-    height: 40px;
+.logo {
+    height: 100%;
+    img {
+        height: 100%;
+    }
 }
 
 .nav ul {
@@ -15,15 +19,21 @@
     display: flex;
     gap: 15px;
     margin: 0;
-    padding: 0;
+    padding: 0 $spacing-m;;
 }
 
 .nav a {
-    color: #61dafb;
+    font-size: $font-size-md;
+    color: $primary-color;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .nav a:hover {
     text-decoration: underline;
+}
+
+.activeLink {
+    border-bottom: 3px solid $accent-color-2;
 }

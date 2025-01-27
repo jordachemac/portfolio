@@ -1,0 +1,50 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5em;
+    background-image: 
+    linear-gradient(rgba(20, 78, 49, 0.5), rgba(20, 78, 49, 0.5)), 
+    url('@assets/images/hero-image.jpg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    color: var(--snow-white);
+}
+
+.title {
+    text-align: center;
+
+    @include breakpoint(sm) {
+        font-size: 3rem;
+    }
+}
+
+.paragraph {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5em;
+
+    @include breakpoint(sm) {
+        font-size: 1rem;
+    }
+}
+
+.text {
+    width: 60%;
+}
+
+.button {
+    align-self: center;
+    max-width: 200px;
+}
+
+.image {
+    align-self: center;
+    height: 14em;
+    margin-top: 1em;
+    width: 24em;
+}
