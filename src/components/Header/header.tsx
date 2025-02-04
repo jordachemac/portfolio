@@ -8,7 +8,6 @@ import {
     LanguageIcon,
 } from '@heroicons/react/24/outline';
 import styles from './header.module.scss';
-import logo from '@assets/logo_color.svg';
 
 const Header: React.FC = () => {
     const { t, i18n } = useTranslation();
@@ -69,9 +68,9 @@ const Header: React.FC = () => {
     // Render
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>
-                <Link to="/" onClick={closeMobileMenu}>
-                    <img src={logo} alt="NZ Organics Group Logo" className={styles.logoImage} />
+            <div>
+                <Link to="/" onClick={closeMobileMenu} className={styles.logoLink}>
+                    <p className={styles.logo}>Jordache Mackenzie</p>
                 </Link>
             </div>
             <nav
@@ -81,7 +80,7 @@ const Header: React.FC = () => {
                 id="primary-navigation"
             >
                 <ul className={styles.navList}>
-                    <li>
+                    {/* <li>
                         <NavLink
                             to="/"
                             className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
@@ -89,14 +88,14 @@ const Header: React.FC = () => {
                         >
                             {t('header.home')}
                         </NavLink>
-                    </li>
+                    </li> */}
                     <li>
                         <NavLink
                             to="/about"
                             className={({ isActive }) => (isActive ? styles.activeLink : undefined)}
                             onClick={closeMobileMenu}
                         >
-                            {t('header.about')}
+                            {t('header.caseStudies')}
                         </NavLink>
                     </li>
                     <li>
@@ -108,11 +107,11 @@ const Header: React.FC = () => {
                             {t('header.contact')}
                         </NavLink>
                     </li>
-                    <li className={styles.languageToggle}>
+                    {/* <li className={styles.languageToggle}>
                         <button onClick={toggleLanguage}>
                             <LanguageIcon /> {t('header.language')}
                         </button>
-                    </li>
+                    </li> */}
                 </ul>
             </nav>
             <button

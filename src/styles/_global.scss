@@ -11,34 +11,34 @@ $border-radius: 4px;
 
 /* Mixins */
 @mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @mixin breakpoint($breakpoint) {
-  @if $breakpoint == sm {
-    @media (min-width: $breakpoint-sm) {
-      @content;
+    @if $breakpoint == sm {
+        @media (min-width: $breakpoint-sm) {
+            @content;
+        }
+    } @else if $breakpoint == md {
+        @media (min-width: $breakpoint-md) {
+            @content;
+        }
+    } @else if $breakpoint == lg {
+        @media (min-width: $breakpoint-lg) {
+            @content;
+        }
+    } @else if $breakpoint == xl {
+        @media (min-width: $breakpoint-xl) {
+            @content;
+        }
     }
-  } @else if $breakpoint == md {
-    @media (min-width: $breakpoint-md) {
-      @content;
-    }
-  } @else if $breakpoint == lg {
-    @media (min-width: $breakpoint-lg) {
-      @content;
-    }
-  } @else if $breakpoint == xl {
-    @media (min-width: $breakpoint-xl) {
-      @content;
-    }
-  }
 }
 
 /* Functions */
 @function rem($px) {
-  @return ($px / $font-size-base) * 1rem;
+    @return ($px / $font-size-base) * 1rem;
 }
 
 /* Color Palette */
@@ -50,18 +50,18 @@ $background-color: #f5f5f5;
 $text-color: #333333;
 
 $snow-white: #f9f9f9;
-$brand-green-5: #D9F0E5;
+$brand-green-5: #d9f0e5;
 $brand-green-100: #084d37;
-$brand-green-300: #1A2D27;
+$brand-green-300: #1a2d27;
 
 /* Typography */
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
 * {
-    font-family: "Fustat", serif;
+    font-family: 'Fustat', serif;
     font-size: 10px;
-    color: $brand-green-5;
+    color: $brand-green-100;
     line-height: 1.5;
     font-synthesis: none;
     font-optical-sizing: auto;
@@ -72,7 +72,7 @@ $font-weight-bold: 700;
     text-size-adjust: 100%;
 
     @include breakpoint(sm) {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
