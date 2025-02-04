@@ -7,8 +7,6 @@ import About from '@pages/About';
 import Contact from '@pages/Contact';
 import PageNotFound from '@pages/PageNotFound';
 
-import './App.css';
-
 const App: React.FC = () => {
     const { i18n } = useTranslation();
 
