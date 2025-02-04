@@ -1,23 +1,23 @@
 {
-    "header": {
-      "home": "Home",
-      "about": "About",
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "language": "عرض باللغة العربية"
+  },
+  "footer": {
+    "rights": "© {{year}} Jordache Mackenzie. All rights reserved.",
+    "links": {
+      "about": "About Us",
       "contact": "Contact",
-      "language": "عرض باللغة العربية"
-    },
-    "footer": {
-      "rights": "© {{year}} NZ Organics Group. All rights reserved.",
-      "links": {
-        "about": "About Us",
-        "contact": "Contact",
-        "privacy": "Privacy Policy"
-      }
-    },
-    "hero": {
-      "title": "NZ Organics Group",
-      "description": "NZ Organics Group Limited is dedicated to building a leading New Zealand-based export and production business, specializing in natural, organic, and GMO-free products. Our mission is to unite a number of New Zealand's top food production companies, including <strong>Over the Moon Dairy</strong>, <strong>Manuka Health</strong>, and <strong>Eggs of NZ</strong>, to create a global powerhouse focused on premium, organic food products for international markets."
-    },
-    "button": {
-      "learnMore": "Learn more"
+      "privacy": "Privacy Policy"
     }
+  },
+  "hero": {
+    "title": "Jordache Mackenzie",
+    "description": "NZ Organics Group Limited is dedicated to building a leading New Zealand-based export and production business, specializing in natural, organic, and GMO-free products. Our mission is to unite a number of New Zealand's top food production companies, including <strong>Over the Moon Dairy</strong>, <strong>Manuka Health</strong>, and <strong>Eggs of NZ</strong>, to create a global powerhouse focused on premium, organic food products for international markets."
+  },
+  "button": {
+    "learnMore": "Learn more"
   }
+}
