@@ -2,15 +2,19 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-height: 90vh;
+    min-height: 82vh;
     justify-content: flex-end;
     row-gap: 0.5rem;
+    background-color: $snow-white;
     background-image: linear-gradient(rgba(20, 78, 49, 0.5), rgba(20, 78, 49, 0.5)),
         url('@assets/images/hero-image.jpg');
+    background-attachment: fixed;
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
     padding: 0rem 2rem 2rem 0rem;
+
+    border-bottom-right-radius: 10%;
 
     @include breakpoint(sm) {
         padding: 6rem 6rem 2rem 0rem;
